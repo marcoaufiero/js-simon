@@ -22,19 +22,40 @@ function inputNumbers(){
         scoreCounter = scoreCounter + 1;
         }
     }
+    
+    document.getElementById('numbersCpu').innerText = `Numeri della CPU: ${cpuList}`
+    document.getElementById('myNumbers').innerText = `I tuoi numeri: ${myNumbers}`
+    document.getElementById('score').innerText = `Score: ${scoreCounter}/5`
+    document.getElementById('numbersGuessed').innerText = `Numeri indovinati: ${guessedNumbers}`
+    
     console.log(scoreCounter)
     console.log(cpuList)
     console.log(myNumbers)
+    console.log(guessedNumbers)
     
 };
 
+function hideNumbers(){
+    document.getElementById('cpuNumbers').classList.add('hidenumbers')
+} 
+
+function restoreClick(){
+    document.getElementById('btn').classList.remove('disablebtn');
+}
 
 function start(){
 
-    
-    
     cpuList = [];
+    myNumbers = [];
+    guessedNumbers = [];
+    scoreCounter = 0;
     document.getElementById('cpuNumbers').innerHTML = '';
+    document.getElementById('cpuNumbers').classList.remove('hidenumbers');
+    document.getElementById('numbersCpu').innerText = '';
+    document.getElementById('myNumbers').innerText = '';
+    document.getElementById('score').innerText = '';
+    document.getElementById('numbersGuessed').innerText = '';
+    
 
     for(let i = 0; i < 5; i++){
         
@@ -46,15 +67,16 @@ function start(){
         }
     }
 
+    setTimeout(hideNumbers, 5000);
+
     document.getElementById('cpuNumbers').innerHTML = `<span>${cpuList}</span>`
 
-    setTimeout(inputNumbers, 5000);
-    
-    
-        
-        
-        
-    
-    
+    setTimeout(inputNumbers, 5500);
+
+    setTimeout(restoreClick, 6000)
     
 };
+
+function disableBtn(){
+    document.getElementById('btn').classList.add('disablebtn');
+}
