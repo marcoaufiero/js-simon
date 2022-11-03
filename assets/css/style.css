@@ -1,9 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;500;600;700;800&family=Poppins&family=Roboto&display=swap');
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1F2833;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.box{
+    height: 50vh;
+    width: 30vw;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #45A29E;
+    border-radius: 20px;
+}
+
 .hidenumbers{
     display: none;
 }
 
 .disablebtn{
     pointer-events: none;
+}
+
+#cpuNumbers{
+    padding-top: 20px;
+    color: white;
+}
+
+#results{
+    padding-top: 20px;
+    color: white;
 }
 
 #btn{
@@ -19,3 +55,4 @@
     background-color: #26303d;
     cursor: pointer;
 }
+
