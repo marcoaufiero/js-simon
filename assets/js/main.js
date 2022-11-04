@@ -17,7 +17,7 @@ function inputNumbers(){
     };
     
     for(let k = 0; k < myNumbers.length; k++){
-        if(cpuList.includes(myNumbers[k])){
+        if(cpuList.includes(myNumbers[k]) && !guessedNumbers.includes(myNumbers[k])){
         guessedNumbers.push(myNumbers[k])
         scoreCounter = scoreCounter + 1;
         }
